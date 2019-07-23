@@ -12,5 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call('UsersTableSeeder');
+        \App\Model\Usuario::create([
+            'login' => 'test',
+            'senha' => md5('test'),
+            'email' => 'email',
+            'active' => true
+        ]);
     }
 }
